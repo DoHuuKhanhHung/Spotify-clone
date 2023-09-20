@@ -2,7 +2,7 @@ import { usePlaylistContext } from "@/contexts/PlaylistContext";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import UserIcon from "../assets/User.webp";
-import { ChevronDownIcon } from "@heroicons/react/outline";
+import { ChevronDoubleDownIcon } from "@heroicons/react/outline";
 // import "tailwindcss/tailwind.css";
 import { useEffect, useState } from "react";
 import { pickRandom } from "@/utils/pickRandom";
@@ -46,7 +46,7 @@ const Center = () => {
             className="rounded-full object-cover h-10"
           />
           <h2>{session?.user?.name}</h2>
-          <ChevronDownIcon className="icon" />
+          <ChevronDoubleDownIcon className="icon" />
         </div>
       </header>
 
