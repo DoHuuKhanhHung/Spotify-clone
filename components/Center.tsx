@@ -2,7 +2,7 @@ import { usePlaylistContext } from "@/contexts/PlaylistContext";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import UserIcon from "../assets/User.webp";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/outline";
 // import "tailwindcss/tailwind.css";
 import { useEffect, useState } from "react";
 import { pickRandom } from "@/utils/pickRandom";

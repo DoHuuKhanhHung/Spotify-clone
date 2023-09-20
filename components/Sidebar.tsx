@@ -5,11 +5,11 @@ export { SessionProvider } from "next-auth/react";
 import {
   HomeIcon,
   HeartIcon,
-  BuildingLibraryIcon,
+  CollectionIcon,
   PlusCircleIcon,
   RssIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
+  SearchIcon,
+} from "@heroicons/react/outline";
 import IconButton from "./iconButton";
 import { SessionProvider, signOut, useSession } from "next-auth/react";
 import { usePlaylistContext } from "@/contexts/PlaylistContext";
@@ -36,8 +36,8 @@ const Sidebar = () => {
     <div className="text-[#a7a7a7] px-5 pt-5 pb-36 text-xs lg:text-sm border-r border-gray-900 h-screen over-y-flow sm:max-w-[12rem] lg:max-w-[15rem] hidden md:block font-semibold rounded-full scrollbar-hide">
       <div className="space-y-4">
         <IconButton icon={HomeIcon} label="Trang Chủ" />
-        <IconButton icon={MagnifyingGlassIcon} label="Tìm Kiếm" />
-        <IconButton icon={BuildingLibraryIcon} label="Thư Viện" />
+        <IconButton icon={SearchIcon} label="Tìm Kiếm" />
+        <IconButton icon={CollectionIcon} label="Thư Viện" />
         <Divider />
         <IconButton icon={PlusCircleIcon} label="Thêm Playlist" />
         <IconButton icon={HeartIcon} label="Yêu Thích" />

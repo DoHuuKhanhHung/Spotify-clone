@@ -4,14 +4,14 @@ import useSpotify from "@/hooks/useSpotify";
 import { SongReducerActionType } from "@/types";
 import Image from "next/image";
 import {
-  ArrowsRightLeftIcon,
-  ForwardIcon,
+  SwitchVerticalIcon,
+  FastForwardIcon,
   PauseIcon,
-  BackwardIcon,
+  RewindIcon,
   PlayIcon,
-  ArrowUturnLeftIcon,
-  SpeakerWaveIcon,
-} from "@heroicons/react/24/solid";
+  ReplyIcon,
+  VolumeUpIcon,
+} from "@heroicons/react/solid";
 import { ChangeEventHandler, Fragment } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
@@ -93,8 +93,8 @@ const Player = () => {
         )}
       </div>
       <div className="flex justify-evenly items-center">
-        <ArrowsRightLeftIcon className="icon-playback" />
-        <BackwardIcon
+        <SwitchVerticalIcon className="icon-playback" />
+        <RewindIcon
           className="icon-playback"
           onClick={handleSkipSong.bind(this, "previous")}
         />
@@ -103,14 +103,14 @@ const Player = () => {
         ) : (
           <PlayIcon className="icon-playback" onClick={handlePlayPause} />
         )}
-        <ForwardIcon
+        <FastForwardIcon
           className="icon-playback"
           onClick={handleSkipSong.bind(this, "next")}
         />
-        <ArrowUturnLeftIcon className="icon-playback" />
+        <ReplyIcon className="icon-playback" />
       </div>
       <div className="flex justify-end items-center pr-5 space-x-3 md:space-x-4">
-        <SpeakerWaveIcon className="icon-playback" />
+        <VolumeUpIcon className="icon-playback" />
         <input
           type="range"
           min={0}
