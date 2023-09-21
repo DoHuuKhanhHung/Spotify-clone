@@ -3,9 +3,15 @@ import NextAuth from "next-auth/next";
 import { scope, spotifyAPI } from "@/config/spotify";
 import { CallbacksOptions } from "next-auth";
 import { ExtendedToken, TokenError } from "@/types";
-import { promises } from "dns";
-import { access } from "fs";
 
+declare module "next-auth" {
+  /**
+   * Returned by `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
+   */
+  interface Session {
+    accessToken?: string;
+  }
+}
 const refreshAccessToken = async (
   token: ExtendedToken
 ): Promise<ExtendedToken> => {
